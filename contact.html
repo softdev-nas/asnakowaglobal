@@ -234,8 +234,18 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
+    
     <script>
+    window.onbeforeunload = () => {
+        for(const form of document.getElementsByTagName('form')) {
+          form.reset();
+        }
+    }
+
+    </script>
+    
+
+    <!-- <script>
         window.onbeforeunload = function () {
             setTimeout(() => {
                 for (const form of document.getElementsByTagName('form')) {
@@ -244,7 +254,7 @@
             }, 500);
 
         };
-    </script>
+    </script> -->
 
 </body>
 
